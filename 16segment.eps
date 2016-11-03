@@ -1,0 +1,193 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing C:/Users/Andrew/Documents/eagle/16 Segment 8x1 v1.5/16segment.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 235 111
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+421108 140830 425092 154814 180.0 b
+413108 140830 417092 154814 180.0 b
+429108 140830 433092 154814 180.0 b
+437108 140830 441092 154814 180.0 b
+445108 140830 449092 154814 180.0 b
+453108 140830 457092 154814 180.0 b
+461108 140830 465092 154814 180.0 b
+469108 140830 473092 154814 180.0 b
+477108 140830 481092 154814 180.0 b
+485108 140830 489092 154814 180.0 b
+405108 140830 409092 154814 180.0 b
+397108 140830 401092 154814 180.0 b
+389108 140830 393092 154814 180.0 b
+381108 140830 385092 154814 180.0 b
+373108 140830 377092 154814 180.0 b
+365108 140830 369092 154814 180.0 b
+357108 140830 361092 154814 180.0 b
+349108 140830 353092 154814 180.0 b
+349108 44830 353092 58814 180.0 b
+357108 44830 361092 58814 180.0 b
+365108 44830 369092 58814 180.0 b
+373108 44830 377092 58814 180.0 b
+381108 44830 385092 58814 180.0 b
+389108 44830 393092 58814 180.0 b
+397108 44830 401092 58814 180.0 b
+405108 44830 409092 58814 180.0 b
+413108 44830 417092 58814 180.0 b
+421108 44830 425092 58814 180.0 b
+429108 44830 433092 58814 180.0 b
+437108 44830 441092 58814 180.0 b
+445108 44830 449092 58814 180.0 b
+453108 44830 457092 58814 180.0 b
+461108 44830 465092 58814 180.0 b
+469108 44830 473092 58814 180.0 b
+477108 44830 481092 58814 180.0 b
+485108 44830 489092 58814 180.0 b
+306428 46230 318412 60214 90.0 b
+306428 63230 318412 77214 90.0 b
+245858 124580 257842 138564 0.0 b
+262858 124580 274842 138564 0.0 b
+347458 174110 359442 188094 0.0 b
+364458 174110 376442 188094 0.0 b
+466058 174110 478042 188094 180.0 b
+449058 174110 461042 188094 180.0 b
+559158 75930 571142 89914 270.0 b
+559158 58930 571142 72914 270.0 b
+584558 75930 596542 89914 270.0 b
+584558 58930 596542 72914 270.0 b
+609958 75930 621942 89914 270.0 b
+609958 58930 621942 72914 270.0 b
+635358 75930 647342 89914 270.0 b
+635358 58930 647342 72914 270.0 b
+559158 109730 571142 123714 90.0 b
+559158 126730 571142 140714 90.0 b
+584558 109730 596542 123714 90.0 b
+584558 126730 596542 140714 90.0 b
+609958 109730 621942 123714 90.0 b
+609958 126730 621942 140714 90.0 b
+635358 109730 647342 123714 90.0 b
+635358 126730 647342 140714 90.0 b
